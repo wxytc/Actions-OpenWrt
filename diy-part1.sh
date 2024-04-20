@@ -18,4 +18,4 @@ echo 'src-git kenzok8sp https://github.com/kenzok8/small-package.git' >>./feeds.
 echo 'src-git kiddin9sp https://github.com/kiddin9/openwrt-packages.git' >>./feeds.conf.default
 # sed -i '/files\/adguardhome.*/d' ./feeds/packages/net/adguardhome/Makefile
 # sed -i '/$(INSTALL_DIR) $(1)\/etc/d' ./feeds/packages/net/adguardhome/Makefile
-sed -i '65,73d' ./feeds/packages/net/adguardhome/Makefile
+sed -i '/Package\/adguardhome\/install/,/endef/d' ./feeds/packages/net/adguardhome/Makefile
