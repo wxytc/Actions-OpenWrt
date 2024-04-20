@@ -18,3 +18,7 @@
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+# sed -i '/files\/adguardhome.*/d' ./feeds/packages/net/adguardhome/Makefile
+# sed -i '/$(INSTALL_DIR) $(1)\/etc/d' ./feeds/packages/net/adguardhome/Makefile
+sed -i '/Package\/adguardhome\/install/,/endef/d' ./feeds/packages/net/adguardhome/Makefile
